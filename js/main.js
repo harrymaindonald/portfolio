@@ -33,8 +33,7 @@
  }
 
 
-
-
-  // Or with jQuery
-
+function notDeployed(){
+    alert("Sorry! This Project has not been deployed");
+}
       
