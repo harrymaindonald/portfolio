@@ -90,7 +90,10 @@
         .portrait {
             width: 250px;
             height: 250px;
-            background: url('../img/portrait.jpg');
+            background-image: url('../img/portraitmain.jpg');
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-position: center;
             border: solid 3px $secondary-color; 
             border-radius: 50%;
         }
