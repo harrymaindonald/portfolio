@@ -1,7 +1,11 @@
 // Wide Screens
 
 @include mediaXl {
-  
+    .projects {
+        .item {
+            margin-top: 15px;
+        }
+    }
 }
 
 // Desktops & Laptops
@@ -45,6 +49,17 @@
 
         .projects {
             grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+        
+            .item{
+                flex-basis: 95%;
+                margin-top: 30px;
+        
+                h5 {
+                    margin-top:5px;
+                    margin-bottom:5px;
+                }
+            }
         }
     }
 
@@ -91,17 +106,7 @@
     
     .projects {
     
-        justify-content: center;
-        
-        .item{
-            flex-basis: 95%;
-            margin-top: 30px;
-    
-            h5 {
-                margin-top:5px;
-                margin-bottom:5px;
-            }
-        }
+       
     
     }
 }

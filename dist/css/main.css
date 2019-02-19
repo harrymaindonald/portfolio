@@ -404,10 +404,10 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center; }
   .projects .item {
-    flex-basis: 25%; }
+    flex-basis: 30%; }
     .projects .item h5 {
       height: 60px;
       font-weight: 400; }
@@ -467,6 +467,10 @@ main {
   color: #C5C6C7;
   height: 60px; }
 
+@media screen and (min-width: 1171px) {
+  .projects .item {
+    margin-top: 15px; } }
+
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   main h1 {
     font-size: 5.1rem !important; }
@@ -489,7 +493,14 @@ main {
       margin-bottom: 1rem;
       font-size: 4.1rem !important; }
     main .projects {
-      grid-template-columns: repeat(2, 1fr); }
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center; }
+      main .projects .item {
+        flex-basis: 95%;
+        margin-top: 30px; }
+        main .projects .item h5 {
+          margin-top: 5px;
+          margin-bottom: 5px; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -514,15 +525,7 @@ main {
     font-size: 19px !important;
     padding: 0.7rem !important; }
   .about-info {
-    flex-direction: column; }
-  .projects {
-    justify-content: center; }
-    .projects .item {
-      flex-basis: 95%;
-      margin-top: 30px; }
-      .projects .item h5 {
-        margin-top: 5px;
-        margin-bottom: 5px; } }
+    flex-direction: column; } }
 
 @media screen and (max-width: 500px) {
   main {

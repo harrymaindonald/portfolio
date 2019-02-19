@@ -416,11 +416,11 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     .item{
-        flex-basis: 25%;
+        flex-basis: 30%;
 
         h5{
             height: 60px;
