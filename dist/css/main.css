@@ -446,12 +446,12 @@ main {
       .boxes div:hover span {
         color: #0B0C10; }
 
-.btn, .btn-dark, .btn-light {
+.btn, .btn-dark, .btn-light, .disabled-btn {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
+  .btn:hover, .btn-dark:hover, .btn-light:hover, .disabled-btn:hover {
     background: #66FCF1;
     color: #0B0C10; }
 
@@ -462,6 +462,14 @@ main {
 .btn-light {
   background: #45A29E;
   color: #333; }
+
+.disabled-btn {
+  background: #83cac7;
+  color: #333;
+  opacity: 0.8; }
+
+.disabled-btn:hover {
+  background: #83cac7; }
 
 #mainFooter {
   text-align: center;
@@ -520,7 +528,7 @@ main {
     height: 35vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("../img/portraitsmall.jpg");
+      background: url("../img/portraitsmall.png");
       background-size: cover;
       width: 112px;
       height: 112px; }

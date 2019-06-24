@@ -491,6 +491,8 @@ main {
     }
 }
 
+
+
 .btn-dark {
     @extend .btn;
     background: darken($primary-color, 50);
@@ -504,7 +506,16 @@ main {
 
 }
 
+.disabled-btn {
+    @extend .btn;
+    background: lighten($color: #45A29E, $amount: 20);
+    color: #333;
+    opacity: 0.8;
+}
 
+.disabled-btn:hover {
+    background: lighten($color: #45A29E, $amount: 20);
+}
 
 
 #mainFooter {
