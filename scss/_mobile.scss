@@ -33,6 +33,11 @@
     }
 
 }
+
+.cv-image embed{
+    width: 600px;
+    height: 900px;
+}
 }
 
 // Tablets  & Small Laptops
@@ -103,12 +108,12 @@
         flex-direction:column;
     }
 
-    
-    .projects {
-    
-       
-    
+    .cv-image embed{
+        width: 350px;
+        height: 580px;
     }
+
+    
 }
 
 // Smart Phones
