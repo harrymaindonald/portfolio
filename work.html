@@ -54,9 +54,14 @@
             My <span class="text-secondary">Work</span>
         </h1>
         <h2 class="sm-heading">
-            Check out some of my projects...
+            Check out some of my projects!
         </h2>
+        <div class="repo-container">
+            <button id = 'btnRepos'>Click to see my GitHub repositories</button>
+            <div id="divResult">
 
+            </div>
+        </div>
         <div class="projects">
             <div class="item">
                 <h3>FlocknSave</h3>
@@ -74,11 +79,11 @@
             <div class="item">
                 <h3>Snitch Stitch</h3>
                 <h5>My final industry project prototype that went towards my degree, involving the creation of a user interface tailored for a client.</h5>
-                <a href="#!">
+                <a href="https://github.com/harrymaindonald/SnitchStitch">
                     <img src="img/project1.PNG" alt="Project">
                 </a>
-                <a onclick="notDeployed()" class="btn-light">
-                    <i class="fas fa-eye"></i> Project
+                <a onclick="notDeployed()" class="btn-lighter disabled-btn">
+                    <i class="fas fa-eye"></i><s> Project</s>
                 </a>
                 <a href="https://github.com/harrymaindonald/SnitchStitch" class="btn-dark">
                     <i class="fab fa-github"></i> Github
@@ -120,6 +125,31 @@
     </footer>
 
     <script src="./js/main.js"></script>
+    <script>
+        const btnRepos = document.getElementById("btnRepos")
+        const divResult = document.getElementById("divResult")
+        btnRepos.addEventListener("click", getRepos)
+        async function getRepos() {
+            clear()
+            const url = "https://api.github.com/users/harrymaindonald/repos"
+            const response = await fetch(url)
+            const result = await response.json()
+
+            result.forEach(i=>{
+
+                const anchor = document.createElement("a")
+                anchor.href = i.html_url;
+                anchor.textContent = i.full_name;
+                divResult.appendChild(anchor)
+                divResult.appendChild(document.createElement("br"))
+            })
+        }
+
+        function clear(){
+            while(divResult.firstChild)
+                divResult.removeChild(divResult.firstChild)
+        }
+    </script>
 </body>
 
 </html>
